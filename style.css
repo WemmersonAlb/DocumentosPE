@@ -43,14 +43,14 @@ img.pernambuco{
 }
 .flex-item a{
     text-decoration: none;
-    color: black;
+    color: rgb(12, 12, 136);
 }
 .flex-item a:visited{
     text-decoration: none;
-    color: black;
+    color: rgb(12, 12, 136);
 }
 .flex-item a:hover{
-    color: black;
+    color: rgb(12, 12, 136);
 }
 /*footer*/
 footer{
