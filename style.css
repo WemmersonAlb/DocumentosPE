@@ -40,6 +40,7 @@ img.ctps{
 }
 img.pernambuco{
     min-width: 100%;
+    margin-bottom: 15px;
 }
 .flex-item a{
     text-decoration: none;
