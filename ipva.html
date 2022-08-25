@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste</title>
+        <!--Meu CSS-->
+        <link rel="stylesheet" href="assets/css/styleIPVA.css"/>
+        <!-- CSS only bootstrap -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--NavBar-->
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="index.html">Início</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="rg.html">RG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ctps.html">CTPS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ipva.html">IPVA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="donate.html">Doações</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--Banner inicial-->
+        <img src="img/pe.png" class="pernambuco flex-section">
+        <!--Corpo-->
+        <div class='flex-section ipvabloco'>
+            <div class='subitem'>
+                <h2>Calculadora de IPVA</h2>
+            </div>
+            <div class='subitem'>
+                <div class='linha'>
+                    <label for='tipo'>Motos de até 50 cc</label>
+                    <input type='radio' name='tipo' id='um'>
+                </div>
+                <div class='linha'>
+                    <label for='tipo'>Motos de 50 até 300 cc</label>
+                    <input type='radio' name='tipo' id='dois'>
+                </div>
+                <div class='linha'>
+                    <label for='tipo'>Motos de 300 até 600 cc</label>
+                    <input type='radio' name='tipo' id='tres'>
+                </div>
+                <div class='linha'>
+                    <label for='tipo'>Motos acima  de 600 cc</label>
+                    <input type='radio' name='tipo' id='quatro'>
+                </div>
+                <div class='linha'>
+                    <label for='tipo'>Carros de até 180 cv</label>
+                    <input type='radio' name='tipo' id='cinco'>
+                </div>
+                <div class='linha'>
+                    <label for='tipo'>Carros acima de 180 cv</label>
+                    <input type='radio' name='tipo' id='seis'>
+                </div>
+            </div>
+            <div class="subitem">
+                <p>Caso queira fazer um emplacamento, preencha o mês de compra do veículo.</p>
+            </div>
+            <div class="subitem">
+                <label for='mes'>Mês:</label>
+                <input type='number' name='mes' id='mes'>
+            </div>
+            <div class="subitem">
+                <label for='veiculo'>Preço do veículo:</label>
+                <input type='number' name='veiculo' id='veiculo'>
+            </div>
+            <div class="subitem">
+                <input type='submit' onclick='ipva()' value='Calcular'>
+            </div>
+            <div class="subitem">
+                <div id='resultado1'></div>
+            </div>
+            <div class="subitem">
+                <div id='taxas'></div>
+            </div>
+            <div class="subitem">
+                <div id='resultado2'></div>
+            </div>
+            <div class="subitem">
+                <input type='submit' value='Limpar' onclick='limpar()'>
+            </div>
+
+        </div>
+        <footer class="flex-section">
+            &copy;Todos os direitos reservados - 2022
+        </footer>
+        <!--Meu JS-->
+        <script src="assets/script/script.js"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="assets/script/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
