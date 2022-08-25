@@ -1,24 +1,21 @@
-var requisito_dia = 0                //modo de avaliar se os campos foram preenchidos devidamente
+               
 var requisito_mes = 0
 var requisito_veiculo = 0
-var requisito_categoria = 0
+var requisito_categoria = 0;
 function ipva(){
-    var dia = Number(document.getElementById("dia").value)        //captação de tratamento de dados
+    
     var mes = Number(document.getElementById('mes').value)        //captação de tratamento de dados
     var veiculo = Number(document.getElementById('veiculo').value)//captação de tratamento de dados
     if(document.getElementById('um').checked == false  &&  document.getElementById('dois').checked == false  &&  document.getElementById('tres').checked == false  &&  document.getElementById('quatro').checked == false  &&  document.getElementById('cinco').checked == false  &&  document.getElementById('seis').checked == false){//verifica se alguma categoria foi selecionada
         alert("Escolha uma categoria para seu Veículo")
     }else{requisito_categoria = 1}//informa que a condição foi satisfeita
-    if(dia<1 || dia>31){
-        alert('Digite um dia válido')
-    }else{requisito_dia = 1}//informa que a condição foi satisfeita
     if(mes<1 || mes>13){
         alert('Digite um mês válido')
     }else{requisito_mes = 1}//informa que a condição foi satisfeita
     if(veiculo<1000){
         alert("Digite o valor válido para seu veículo zero")
     }else{requisito_veiculo = 1}//informa que a condição foi satisfeita
-    if(requisito_categoria == 1 && requisito_dia == 1 && requisito_mes == 1 && requisito_veiculo == 1){//se todas as condições foram satisfeitas, dá início ao cálculo
+    if(requisito_categoria == 1  && requisito_mes == 1 && requisito_veiculo == 1){//se todas as condições foram satisfeitas, dá início ao cálculo
         
         var resultado1 = document.getElementById('resultado1')//localiza onde o resultado deve ser exibido
         
@@ -33,7 +30,7 @@ function ipva(){
             seguro = 15
         }else if(4<i<=8){
             seguro = 10
-        }else if(8<i){
+        }else if(8<i){ 
             seguro = 6
         }
         }else if(document.getElementById('dois').checked == true){
@@ -76,14 +73,20 @@ function ipva(){
         }
         n+=31//ajuste para que em dezembro tenha 1 mês para se calcular (sem isso o dezembro não é contado)
         var desconto = (aliquota/365)*n//calculo propriamente dito do ipva
+        
         ipva = (veiculo/100)*desconto
+        var valorLicenciamento = ((veiculo/100)*aliquota) + 120+ 40;
         var ipva_localizado = ipva.toLocaleString('pt-br',{style:'currency', currency:'BRL'})//localiza o preço para real
         var emplacamento_l = ipva+210//auxilia na localização do preço para real
         var emplacamento_localizado = emplacamento_l.toLocaleString('pt-br',{style:'currency', currency:'BRL'})//localiza o preço para real
+        var valorLicenciamento1 = valorLicenciamento.toLocaleString('pt-br',{style:'currency', currency:'BRL'})//localizar o resultado para o preço em real
 
         resultado1.innerHTML=`${ipva_localizado}`//exibe o valor do ipva sozinho
         var taxas = document.getElementById('taxas')//localiza onde será exibido o ipva + taxas
         taxas.innerHTML=`${emplacamento_localizado}`//exibe ipva mas outras taxas do primeiro emplacamento
+        var licenciamento = document.getElementById('resultado2')//localiza onde será exibido o ipva com as taxas de licenciamento
+        licenciamento.innerHTML=`${valorLicenciamento1}`//exibe o valor do licenciamento
+        
     }
 }
 function limpar1(){
