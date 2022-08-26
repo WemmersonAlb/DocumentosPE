@@ -11,30 +11,23 @@ body{
     margin-bottom: 30px;
     flex-direction: column;
     justify-content: center;
+    max-height: 250px;
 }
-.flex-item{
+.carrossel{
+    background-color: black;
+    padding: 305px 20px !important;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin-bottom: 25px;
-}
-.inverte{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-}
-.subitem{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 20px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1%;
 }
 /*Tags*/
 p{
     text-align: justify;
 }
 img{
-    max-width: 100px;
+    max-width: 300px;
 }
 img.pernambuco{
     min-width: 100%;
