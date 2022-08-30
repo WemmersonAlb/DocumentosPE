@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Teste</title>
+        <title>IPVA</title>
         <!--Meu CSS-->
         <link rel="stylesheet" href="assets/css/styleIPVA.css"/>
         <!-- CSS only bootstrap -->
@@ -39,7 +39,9 @@
           </div>
         </nav>
         <!--Banner inicial-->
-        <img src="img/pe.png" class="pernambuco flex-section">
+        <a href="index.html">
+            <img src="img/pe.png" class="pernambuco flex-section">
+        </a>
         <!--Corpo-->
         <div class='flex-section ipvabloco'>
             <div class='subitem'>
@@ -72,7 +74,7 @@
                 </div>
             </div>
             <div class="subitem">
-                <p>Caso queira fazer um emplacamento, preencha o mês de compra do veículo.</p>
+                <p>Caso queira fazer um primeiro emplacamento, preencha o mês de compra do veículo:</p>
             </div>
             <div class="subitem">
                 <label for='mes'>Mês:</label>
@@ -86,13 +88,13 @@
                 <input type='submit' onclick='ipva()' value='Calcular'>
             </div>
             <div class="subitem resultado">
-                <div id='resultado1'></div>
+                <p>IPVA do ano corrente (para primeiro emplacamento)</p><div id='resultado1'></div>
             </div>
             <div class="subitem resultado">
-                <div id='taxas'></div>
+                <p>Custo total do Primeiro Emplacamento</p><div id='taxas'></div>
             </div>
             <div class="subitem resultado">
-                <div id='resultado2'></div>
+                <p>Taxas do licenciamento + ipva</p><div id='resultado2'></div>
             </div>
             <div class="subitem">
                 <input type='submit' value='Limpar' onclick='limpar1()'>
